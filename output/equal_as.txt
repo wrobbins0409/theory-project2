@@ -1,0 +1,280 @@
+
+==================================================
+Running EqualAsDoubleTape on input: aba
+----------------------------------------
+Step 0:
+Tape 1: [a]ba_
+Tape 2: [_]
+Current state: q0
+
+Step 1:
+Tape 1: a[b]a_
+Tape 2: a[_]
+Current state: q1
+
+Step 2:
+Tape 1: ab[a]_
+Tape 2: [a]_
+Current state: q2
+
+Step 3:
+Tape 1: ab[a]_
+Tape 2: [_]a_
+Current state: q2
+
+Step 4:
+Tape 1: ab[a]_
+Tape 2: _[a]_
+Current state: q3
+
+Step 5:
+Tape 1: aba[_]
+Tape 2: _a[_]
+Current state: q3
+
+Step 6:
+Tape 1: aba[_]
+Tape 2: _a[_]
+Current state: qaccept
+
+ACCEPT: Halted in accepting state qaccept
+
+==================================================
+Running EqualAsDoubleTape on input: aabaa
+----------------------------------------
+Step 0:
+Tape 1: [a]abaa_
+Tape 2: [_]
+Current state: q0
+
+Step 1:
+Tape 1: a[a]baa_
+Tape 2: a[_]
+Current state: q1
+
+Step 2:
+Tape 1: aa[b]aa_
+Tape 2: aa[_]
+Current state: q1
+
+Step 3:
+Tape 1: aab[a]a_
+Tape 2: a[a]_
+Current state: q2
+
+Step 4:
+Tape 1: aab[a]a_
+Tape 2: [a]a_
+Current state: q2
+
+Step 5:
+Tape 1: aab[a]a_
+Tape 2: [_]aa_
+Current state: q2
+
+Step 6:
+Tape 1: aab[a]a_
+Tape 2: _[a]a_
+Current state: q3
+
+Step 7:
+Tape 1: aaba[a]_
+Tape 2: _a[a]_
+Current state: q3
+
+Step 8:
+Tape 1: aabaa[_]
+Tape 2: _aa[_]
+Current state: q3
+
+Step 9:
+Tape 1: aabaa[_]
+Tape 2: _aa[_]
+Current state: qaccept
+
+ACCEPT: Halted in accepting state qaccept
+
+==================================================
+Running EqualAsDoubleTape on input: aaabaaa
+----------------------------------------
+Step 0:
+Tape 1: [a]aabaaa_
+Tape 2: [_]
+Current state: q0
+
+Step 1:
+Tape 1: a[a]abaaa_
+Tape 2: a[_]
+Current state: q1
+
+Step 2:
+Tape 1: aa[a]baaa_
+Tape 2: aa[_]
+Current state: q1
+
+Step 3:
+Tape 1: aaa[b]aaa_
+Tape 2: aaa[_]
+Current state: q1
+
+Step 4:
+Tape 1: aaab[a]aa_
+Tape 2: aa[a]_
+Current state: q2
+
+Step 5:
+Tape 1: aaab[a]aa_
+Tape 2: a[a]a_
+Current state: q2
+
+Step 6:
+Tape 1: aaab[a]aa_
+Tape 2: [a]aa_
+Current state: q2
+
+Step 7:
+Tape 1: aaab[a]aa_
+Tape 2: [_]aaa_
+Current state: q2
+
+Step 8:
+Tape 1: aaab[a]aa_
+Tape 2: _[a]aa_
+Current state: q3
+
+Step 9:
+Tape 1: aaaba[a]a_
+Tape 2: _a[a]a_
+Current state: q3
+
+Step 10:
+Tape 1: aaabaa[a]_
+Tape 2: _aa[a]_
+Current state: q3
+
+Step 11:
+Tape 1: aaabaaa[_]
+Tape 2: _aaa[_]
+Current state: q3
+
+Step 12:
+Tape 1: aaabaaa[_]
+Tape 2: _aaa[_]
+Current state: qaccept
+
+ACCEPT: Halted in accepting state qaccept
+
+==================================================
+Running EqualAsDoubleTape on input: abaaa
+----------------------------------------
+Step 0:
+Tape 1: [a]baaa_
+Tape 2: [_]
+Current state: q0
+
+Step 1:
+Tape 1: a[b]aaa_
+Tape 2: a[_]
+Current state: q1
+
+Step 2:
+Tape 1: ab[a]aa_
+Tape 2: [a]_
+Current state: q2
+
+Step 3:
+Tape 1: ab[a]aa_
+Tape 2: [_]a_
+Current state: q2
+
+Step 4:
+Tape 1: ab[a]aa_
+Tape 2: _[a]_
+Current state: q3
+
+Step 5:
+Tape 1: aba[a]a_
+Tape 2: _a[_]
+Current state: q3
+
+Step 6:
+Tape 1: aba[a]a_
+Tape 2: _a[_]
+Current state: qreject
+
+REJECT: Halted in rejecting state qreject
+
+==================================================
+Running EqualAsDoubleTape on input: aa
+----------------------------------------
+Step 0:
+Tape 1: [a]a_
+Tape 2: [_]
+Current state: q0
+
+Step 1:
+Tape 1: a[a]_
+Tape 2: a[_]
+Current state: q1
+
+Step 2:
+Tape 1: aa[_]
+Tape 2: aa[_]
+Current state: q1
+
+Step 3:
+Tape 1: aa[_]
+Tape 2: aa[_]
+Current state: qreject
+
+REJECT: Halted in rejecting state qreject
+
+==================================================
+Running EqualAsDoubleTape on input: b
+----------------------------------------
+Step 0:
+Tape 1: [b]_
+Tape 2: [_]
+Current state: q0
+
+Step 1:
+Tape 1: [b]_
+Tape 2: [_]
+Current state: qreject
+
+REJECT: Halted in rejecting state qreject
+
+==================================================
+Running EqualAsDoubleTape on input: ab
+----------------------------------------
+Step 0:
+Tape 1: [a]b_
+Tape 2: [_]
+Current state: q0
+
+Step 1:
+Tape 1: a[b]_
+Tape 2: a[_]
+Current state: q1
+
+Step 2:
+Tape 1: ab[_]
+Tape 2: [a]_
+Current state: q2
+
+Step 3:
+Tape 1: ab[_]
+Tape 2: [_]a_
+Current state: q2
+
+Step 4:
+Tape 1: ab[_]
+Tape 2: _[a]_
+Current state: q3
+
+Step 5:
+Tape 1: ab[_]
+Tape 2: _[a]_
+Current state: qreject
+
+REJECT: Halted in rejecting state qreject

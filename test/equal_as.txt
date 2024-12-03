@@ -1,0 +1,32 @@
+["EqualAsDoubleTape", 2]
+# Must have at least one 'a' at start
+["q0", "_", "_", "qreject", "_", "_", "S", "S"]
+["q0", "b", "_", "qreject", "b", "_", "S", "S"]
+
+# Initial state: copy first a's to second tape
+["q0", "a", "_", "q1", "a", "a", "R", "R"]
+
+# Continue copying a's until we see b
+["q1", "a", "*", "q1", "a", "a", "R", "R"]
+
+# When we see b, move second tape head back to start
+["q1", "b", "*", "q2", "b", "*", "R", "L"]
+# No b found - reject
+["q1", "_", "*", "qreject", "_", "*", "S", "S"]
+
+# Move second tape to start
+["q2", "*", "a", "q2", "*", "a", "S", "L"]
+["q2", "*", "_", "q3", "*", "_", "S", "R"]
+
+# Must have at least one 'a' after b
+["q3", "_", "a", "qreject", "_", "a", "S", "S"]
+
+# Match a's after b with ones on second tape
+["q3", "a", "a", "q3", "a", "a", "R", "R"]
+
+# If we run out of a's on both tapes simultaneously, accept
+["q3", "_", "_", "qaccept", "_", "_", "S", "S"]
+
+# If one tape has a's but other doesn't, reject
+["q3", "a", "_", "qreject", "a", "_", "S", "S"]
+["q3", "_", "a", "qreject", "_", "a", "S", "S"]

@@ -1,0 +1,35 @@
+["Equal0s1sSingleTape", 1]
+# Must start with 0
+["q0", "1", "qreject", "1", "S"]
+["q0", "_", "qreject", "_", "S"]
+
+# Mark first 0 and go right looking for 1
+["q0", "0", "q1", "X", "R"]
+
+# Keep going right until we find a 1
+["q1", "0", "q1", "0", "R"]
+["q1", "_", "qreject", "_", "S"]
+
+# Found a 1, mark it and go back left looking for 0
+["q1", "1", "q2", "Y", "L"]
+
+# Go left looking for an unmarked 0
+["q2", "0", "q2", "0", "L"]
+["q2", "X", "q2", "X", "L"]
+["q2", "Y", "q2", "Y", "L"]
+
+# Found an unmarked 0, mark it and go right looking for unmarked 1
+["q2", "_", "q3", "_", "R"]
+["q3", "X", "q3", "X", "R"]
+["q3", "0", "q1", "X", "R"]
+
+# In q1, keep going right until we find an unmarked 1
+["q1", "Y", "q1", "Y", "R"]
+
+# When all matched, verify we have no unmarked symbols
+["q3", "Y", "q3", "Y", "R"]
+["q3", "_", "qaccept", "_", "S"]
+
+# Reject if we find unmatched symbols
+["q3", "0", "qreject", "0", "S"]
+["q3", "1", "qreject", "1", "S"]

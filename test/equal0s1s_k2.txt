@@ -1,0 +1,29 @@
+["Equal0s1sDoubleTape", 2]
+# Must start with 0
+["q0", "1", "*", "qreject", "1", "*", "S", "S"]
+["q0", "_", "*", "qreject", "_", "*", "S", "S"]
+
+# First 0: mark on first tape, copy to second tape
+["q0", "0", "_", "q1", "X", "0", "R", "R"]
+
+# Keep marking 0s and copying to second tape
+["q1", "0", "*", "q1", "X", "0", "R", "R"]
+
+# When we hit first 1, move second tape head back to start
+["q1", "1", "*", "q2", "1", "*", "S", "L"]
+
+# Move second tape head back to start
+["q2", "*", "0", "q2", "*", "*", "S", "L"]
+["q2", "*", "_", "q3", "*", "*", "S", "R"]
+
+# Match each 1 with a 0 on second tape
+["q3", "1", "0", "q3", "X", "X", "R", "R"]
+
+# When done with 1s, verify all matched
+["q3", "_", "_", "qaccept", "_", "_", "S", "S"]
+
+# Reject cases
+["q1", "_", "*", "qreject", "_", "*", "S", "S"]
+["q3", "0", "*", "qreject", "0", "*", "S", "S"]
+["q3", "1", "_", "qreject", "1", "_", "S", "S"]
+["q3", "_", "0", "qreject", "_", "0", "S", "S"]
