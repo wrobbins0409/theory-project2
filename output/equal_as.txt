@@ -278,3 +278,18 @@ Tape 2: _[a]_
 Current state: qreject
 
 REJECT: Halted in rejecting state qreject
+
+==================================================
+Running EqualAsDoubleTape on input: 
+----------------------------------------
+Step 0:
+Tape 1: [_]
+Tape 2: [_]
+Current state: q0
+
+Step 1:
+Tape 1: [_]
+Tape 2: [_]
+Current state: qreject
+
+REJECT: Halted in rejecting state qreject

@@ -27,11 +27,11 @@ def test_tm_on_inputs(tm, accept_cases, reject_cases):
 def main():
     # Test cases for a^i b a^i
     equal_as_accept = ["aba", "aabaa", "aaabaaa"]
-    equal_as_reject = ["abaaa", "aa", "b", "ab"]
+    equal_as_reject = ["abaaa", "aa", "b", "ab", ""]
 
     # Test cases for 0^i 1^i
     equal_01_accept = ["01", "0011", "000111"]
-    equal_01_reject = ["0", "1", "00", "11", "011"]
+    equal_01_reject = ["0", "1", "00", "11", "011", ""]
 
     # Test 2-tape equal a's machine
     print("\nTesting 1-tape equal a's machine:")

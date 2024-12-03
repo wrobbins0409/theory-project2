@@ -378,3 +378,16 @@ Tape 1: _XY[1]_
 Current state: qreject
 
 REJECT: Halted in rejecting state qreject
+
+==================================================
+Running Equal0s1sSingleTape on input: 
+----------------------------------------
+Step 0:
+Tape 1: [_]
+Current state: q0
+
+Step 1:
+Tape 1: [_]
+Current state: qreject
+
+REJECT: Halted in rejecting state qreject
