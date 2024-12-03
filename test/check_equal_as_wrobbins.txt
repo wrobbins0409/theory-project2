@@ -1,0 +1,9 @@
+#accept
+aba
+aabaa
+aaabaaa
+#reject
+abaaa
+aa
+b
+ab
